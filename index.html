@@ -90,11 +90,11 @@
       const animate = () => {
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
-        mesh.rotation.y += 0.001;
+        mesh.rotation.y += 0.006;
 
         coulds.rotation.y -= 0.001;
         arrayMeshMoon.map((elem) => {
-          elem.rotation.y -= 0.01;
+          elem.rotation.y -= 0.005;
           // elem.rotation.x -= 0.01;
         });
       };
