@@ -1,5 +1,3 @@
-import * as THREE from "./three.js";
-
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -8,7 +6,7 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 const renderer = new THREE.WebGLRenderer();
-
+const root = new THREE.Object3D();
 const geometry = new THREE.SphereGeometry(0.5, 32, 32);
 const planet = new THREE.MeshPhongMaterial({
   map: THREE.ImageUtils.loadTexture("../img/earth.jpg"),
