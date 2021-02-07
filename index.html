@@ -32,7 +32,8 @@
 
         bumpScale: 0.01,
         specularMap: THREE.ImageUtils.loadTexture("./img/water.png"),
-        specular: new THREE.Color("white"),
+        specular: new THREE.Color("rgba(255, 255, 255, .1"),
+        shininess: 2,
       });
 
       const coulds = new THREE.Mesh(
@@ -46,7 +47,7 @@
       mesh.position.set(0, 0, 0);
 
       var light = new THREE.DirectionalLight(0xffffff, 1);
-      light.position.set(0, 1, 1);
+      light.position.set(0, 0.4, 1.2);
 
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
@@ -61,7 +62,7 @@
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
         mesh.rotation.y += 0.001;
-        could.rotation.y += 0.01;
+        coulds.rotation.y -= 0.001;
       };
 
       animate();
