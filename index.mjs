@@ -1,3 +1,7 @@
+import { user } from "./test.mjs";
+console.log(user, "user");
+console.log("tutu");
+
 const scene = new THREE.Scene({ background: "red" });
 // scene.background({ color: "red" });
 const camera = new THREE.PerspectiveCamera(
@@ -72,17 +76,23 @@ scene.add(coulds);
 scene.add(light);
 
 // mouse event to camera
-document.addEventListener("mousemove", (e) => {
-  console.log(e);
-  console.log(camera);
+// document.addEventListener("mousemove", (e) => {
+//   // camera.position.x = (e.x - window.innerWidth / 2) * 0.005;
+//   let moonNw = arrayMeshMoon[0];
+//   let moonNe = arrayMeshMoon[2];
+//   // moonNw.position.x = (e.x - window.innerWidth / 2) * 0.005;
+//   // moonNw.position.y = (e.y - window.innerWidth / 2) * -0.003;
 
-  // camera.position.x = (e.x - window.innerWidth / 2) * 0.005;
-  let moonNw = arrayMeshMoon[0];
-  // function moonNwInit(moonNw) {}
-  moonNw.position.x = (e.x - window.innerWidth / 2) * 0.005;
-  moonNw.position.y = (e.y - window.innerHeight / 2) * 0.005;
-  camera.lookAt(scene.position);
-});
+//   // moonNe.position.y = (e.y - window.innerWidth / 2) * -0.003;
+
+//   // moonNw.position.x = (e.x - window.innerHeight / 2) * 0.003;
+
+//   // moonNe.position.x = (e.x - window.innerHeight / 2) * 0.003;
+//   // console.log(e.x, "e.x");
+//   // console.log(window.innerHeight, "windonw.innerHeight");
+//   // moonNe.position.y = (e.y - window.innerHeight / 2) * 0.005;
+//   camera.lookAt(scene.position);
+// });
 
 const animate = () => {
   requestAnimationFrame(animate);
